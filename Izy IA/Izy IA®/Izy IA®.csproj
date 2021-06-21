@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{4D5D627B-63BD-48BE-AFAD-503546B76D6D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Izy IA®</RootNamespace>
+    <AssemblyName>Izy IA®</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationIcon>Izy IA®.ico</ApplicationIcon>
+    <StartupObject>AVJARVISB4.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoUpdater.NET">
+      <HintPath>..\..\..\..\..\Assistente Virtual®\AutoUpdater.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="comabusc">
+      <HintPath>..\..\..\..\..\Assistente Virtual®\comabusc.dll</HintPath>
+    </Reference>
+    <Reference Include="InputSimulator">
+      <HintPath>..\..\..\..\..\Assistente Virtual®\InputSimulator.dll</HintPath>
+    </Reference>
+    <Reference Include="Jarvis.CapaData">
+      <HintPath>..\..\..\..\..\Assistente Virtual®\Jarvis.CapaData.dll</HintPath>
+    </Reference>
+    <Reference Include="Jarvis.DataBaseManager">
+      <HintPath>..\..\..\..\..\Assistente Virtual®\Jarvis.DataBaseManager.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit">
+      <HintPath>..\..\..\..\..\Assistente Virtual®\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Speech">
+      <HintPath>..\..\..\..\..\Assistente Virtual®\Microsoft.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit">
+      <HintPath>..\..\..\..\..\Assistente Virtual®\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MoviePlayList">
+      <HintPath>..\..\..\..\..\Assistente Virtual®\MoviePlayList.exe</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="VirtualKey">
+      <HintPath>..\..\..\..\..\Assistente Virtual®\VirtualKey.exe</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AVJARVISB4\Alarm.cs" />
+    <Compile Include="AVJARVISB4\App.cs" />
+    <Compile Include="AVJARVISB4\AVJARVIS.cs" />
+    <Compile Include="AVJARVISB4\Clases\Shell32.cs" />
+    <Compile Include="AVJARVISB4\Clases\SoundEffects.cs" />
+    <Compile Include="AVJARVISB4\Clases\User32.cs" />
+    <Compile Include="AVJARVISB4\Clases\Winm.cs" />
+    <Compile Include="AVJARVISB4\Clima.cs" />
+    <Compile Include="AVJARVISB4\Comandos.cs" />
+    <Compile Include="AVJARVISB4\Confg.cs" />
+    <Compile Include="AVJARVISB4\Cuentas.cs" />
+    <Compile Include="AVJARVISB4\G1FeedNews.cs" />
+    <Compile Include="AVJARVISB4\G1NewsItem.cs" />
+    <Compile Include="AVJARVISB4\Interface.cs" />
+    <Compile Include="AVJARVISB4\MemoryHelper.cs" />
+    <Compile Include="AVJARVISB4\MessageInfo.cs" />
+    <Compile Include="AVJARVISB4\Notificacion.cs" />
+    <Compile Include="AVJARVISB4\PCStats.cs" />
+    <Compile Include="AVJARVISB4\Properties\Resources.cs" />
+    <Compile Include="AVJARVISB4\Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AVJARVISB4\PuertoSerial.cs" />
+    <Compile Include="AVJARVISB4\Recordatorio.cs" />
+    <Compile Include="AVJARVISB4\Resources\Resource1.cs" />
+    <Compile Include="AVJARVISB4\VentanaInfo.cs" />
+    <Compile Include="AVJARVISB4\Win32.cs" />
+    <Compile Include="Izy\App.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="A V®.g.resources" />
+    <EmbeddedResource Include="AVJARVISB4\Properties\Resources.resources" />
+    <EmbeddedResource Include="AVJARVISB4\Resources\Resource1.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AVJARVISB4\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
